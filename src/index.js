@@ -14,7 +14,7 @@ app.use(
     proxyReqOptDecorator(opts) {
       opts.headers["x-forwarded-host"] = "localhost:3000/admins";
       return opts;
-    },
+    }
   })
 );
 app.use(express.static("public"));
@@ -25,7 +25,7 @@ app.get("*", (req, res) => {
     .map(({ route }) => {
       return route.loadData ? route.loadData(store) : null;
     })
-    .map((promise) => {
+    .map(promise => {
       if (promise) {
         return new Promise((resolve, reject) => {
           promise.then(resolve).catch(resolve);

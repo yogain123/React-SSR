@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchUsers } from '../actions';
-import { Helmet } from 'react-helmet';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchUsers } from "../actions";
+import { Helmet } from "react-helmet";
 
 class UsersList extends Component {
   componentDidMount() {
@@ -44,5 +44,8 @@ function loadData(store) {
 
 export default {
   loadData,
-  component: connect(mapStateToProps, { fetchUsers })(UsersList)
+  component: connect(
+    mapStateToProps,
+    { fetchUsers }
+  )(UsersList)
 };
