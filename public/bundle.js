@@ -2296,7 +2296,7 @@ Object.defineProperty(exports, "__esModule", {
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var FETCH_USERS = exports.FETCH_USERS = 'fetch_users';
+var FETCH_USERS = exports.FETCH_USERS = "fetch_users";
 var fetchUsers = exports.fetchUsers = function fetchUsers() {
   return function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(dispatch, getState, api) {
@@ -2306,7 +2306,7 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return api.get('/users');
+              return api.get("/users");
 
             case 2:
               res = _context.sent;
@@ -2318,7 +2318,7 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
               });
 
             case 4:
-            case 'end':
+            case "end":
               return _context.stop();
           }
         }
@@ -2331,7 +2331,7 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
   }();
 };
 
-var FETCH_CURRENT_USER = exports.FETCH_CURRENT_USER = 'fetch_current_user';
+var FETCH_CURRENT_USER = exports.FETCH_CURRENT_USER = "fetch_current_user";
 var fetchCurrentUser = exports.fetchCurrentUser = function fetchCurrentUser() {
   return function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(dispatch, getState, api) {
@@ -2341,7 +2341,7 @@ var fetchCurrentUser = exports.fetchCurrentUser = function fetchCurrentUser() {
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return api.get('/current_user');
+              return api.get("/current_user");
 
             case 2:
               res = _context2.sent;
@@ -2353,7 +2353,7 @@ var fetchCurrentUser = exports.fetchCurrentUser = function fetchCurrentUser() {
               });
 
             case 4:
-            case 'end':
+            case "end":
               return _context2.stop();
           }
         }
@@ -2366,7 +2366,7 @@ var fetchCurrentUser = exports.fetchCurrentUser = function fetchCurrentUser() {
   }();
 };
 
-var FETCH_ADMINS = exports.FETCH_ADMINS = 'fetch_admins';
+var FETCH_ADMINS = exports.FETCH_ADMINS = "fetch_admins";
 var fetchAdmins = exports.fetchAdmins = function fetchAdmins() {
   return function () {
     var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(dispatch, getState, api) {
@@ -2376,7 +2376,7 @@ var fetchAdmins = exports.fetchAdmins = function fetchAdmins() {
           switch (_context3.prev = _context3.next) {
             case 0:
               _context3.next = 2;
-              return api.get('/admins');
+              return api.get("/admins");
 
             case 2:
               res = _context3.sent;
@@ -2388,7 +2388,7 @@ var fetchAdmins = exports.fetchAdmins = function fetchAdmins() {
               });
 
             case 4:
-            case 'end':
+            case "end":
               return _context3.stop();
           }
         }
@@ -9517,7 +9517,7 @@ var _reducers2 = _interopRequireDefault(_reducers);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var axiosInstance = _axios2.default.create({
-  baseURL: '/api'
+  baseURL: "/api"
 }); // Startup point for the client side application
 
 
@@ -9530,12 +9530,12 @@ _reactDom2.default.hydrate(_react2.default.createElement(
     _reactRouterDom.BrowserRouter,
     null,
     _react2.default.createElement(
-      'div',
+      "div",
       null,
       (0, _reactRouterConfig.renderRoutes)(_Routes2.default)
     )
   )
-), document.querySelector('#root'));
+), document.querySelector("#root"));
 
 /***/ }),
 /* 199 */
@@ -40021,12 +40021,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = [_extends({}, _App2.default, {
   routes: [_extends({}, _HomePage2.default, {
-    path: '/',
+    path: "/",
     exact: true
   }), _extends({}, _AdminsListPage2.default, {
-    path: '/admins'
+    path: "/admins"
   }), _extends({}, _UsersListPage2.default, {
-    path: '/users'
+    path: "/users"
   }), _extends({}, _NotFoundPage2.default)]
 })];
 
@@ -40059,7 +40059,7 @@ var App = function App(_ref) {
   var route = _ref.route;
 
   return _react2.default.createElement(
-    'div',
+    "div",
     null,
     _react2.default.createElement(_Header2.default, null),
     (0, _reactRouterConfig.renderRoutes)(route.routes)
@@ -40099,49 +40099,49 @@ var Header = function Header(_ref) {
   var auth = _ref.auth;
 
   var authButton = auth ? _react2.default.createElement(
-    'a',
-    { href: '/api/logout' },
-    'Logout'
+    "a",
+    { href: "/api/logout" },
+    "Logout"
   ) : _react2.default.createElement(
-    'a',
-    { href: '/api/auth/google' },
-    'Login'
+    "a",
+    { href: "/api/auth/google" },
+    "Login"
   );
 
   return _react2.default.createElement(
-    'nav',
+    "nav",
     null,
     _react2.default.createElement(
-      'div',
-      { className: 'nav-wrapper' },
+      "div",
+      { className: "nav-wrapper" },
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/', className: 'brand-logo' },
-        'React SSR'
+        { to: "/", className: "brand-logo" },
+        "React SSR"
       ),
       _react2.default.createElement(
-        'ul',
-        { className: 'right' },
+        "ul",
+        { className: "right" },
         _react2.default.createElement(
-          'li',
+          "li",
           null,
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/users' },
-            'Users'
+            { to: "/users" },
+            "Users"
           )
         ),
         _react2.default.createElement(
-          'li',
+          "li",
           null,
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/admins' },
-            'Admins'
+            { to: "/admins" },
+            "Admins"
           )
         ),
         _react2.default.createElement(
-          'li',
+          "li",
           null,
           authButton
         )
@@ -40177,17 +40177,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Home = function Home() {
   return _react2.default.createElement(
-    'div',
-    { className: 'center-align', style: { marginTop: '200px' } },
+    "div",
+    { className: "center-align", style: { marginTop: "200px" } },
     _react2.default.createElement(
-      'h3',
+      "h3",
       null,
-      'Welcome'
+      "Welcome"
     ),
     _react2.default.createElement(
-      'p',
+      "p",
       null,
-      'Check out these awesome features'
+      "Check out these awesome features"
     )
   );
 };
@@ -40237,45 +40237,45 @@ var UsersList = function (_Component) {
   }
 
   _createClass(UsersList, [{
-    key: 'componentDidMount',
+    key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchUsers();
     }
   }, {
-    key: 'renderUsers',
+    key: "renderUsers",
     value: function renderUsers() {
       return this.props.users.map(function (user) {
         return _react2.default.createElement(
-          'li',
+          "li",
           { key: user.id },
           user.name
         );
       });
     }
   }, {
-    key: 'head',
+    key: "head",
     value: function head() {
       return _react2.default.createElement(
         _reactHelmet.Helmet,
         null,
         _react2.default.createElement(
-          'title',
+          "title",
           null,
-          this.props.users.length + ' Users Loaded'
+          this.props.users.length + " Users Loaded"
         ),
-        _react2.default.createElement('meta', { property: 'og:title', content: 'Users App' })
+        _react2.default.createElement("meta", { property: "og:title", content: "Users App" })
       );
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
         this.head(),
-        'Here\'s a big list of users:',
+        "Here's a big list of users:",
         _react2.default.createElement(
-          'ul',
+          "ul",
           null,
           this.renderUsers()
         )
@@ -42181,9 +42181,9 @@ var NotFoundPage = function NotFoundPage(_ref) {
 
   staticContext.notFound = true;
   return _react2.default.createElement(
-    'h1',
+    "h1",
     null,
-    'Ooops, route not found.'
+    "Ooops, route not found."
   );
 };
 
@@ -42234,34 +42234,34 @@ var AdminsListPage = function (_Component) {
   }
 
   _createClass(AdminsListPage, [{
-    key: 'componentDidMount',
+    key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchAdmins();
     }
   }, {
-    key: 'renderAdmins',
+    key: "renderAdmins",
     value: function renderAdmins() {
       return this.props.admins.map(function (admin) {
         return _react2.default.createElement(
-          'li',
+          "li",
           { key: admin.id },
           admin.name
         );
       });
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
         _react2.default.createElement(
-          'h3',
+          "h3",
           null,
-          'Protected list of admins'
+          "Protected list of admins"
         ),
         _react2.default.createElement(
-          'ul',
+          "ul",
           null,
           this.renderAdmins()
         )
@@ -42326,16 +42326,16 @@ exports.default = function (ChildComponent) {
     }
 
     _createClass(RequireAuth, [{
-      key: 'render',
+      key: "render",
       value: function render() {
         switch (this.props.auth) {
           case false:
-            return _react2.default.createElement(_reactRouterDom.Redirect, { to: '/' });
+            return _react2.default.createElement(_reactRouterDom.Redirect, { to: "/" });
           case null:
             return _react2.default.createElement(
-              'div',
+              "div",
               null,
-              'Loading...'
+              "Loading..."
             );
           default:
             return _react2.default.createElement(ChildComponent, this.props);
