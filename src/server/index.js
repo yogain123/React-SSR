@@ -8,6 +8,11 @@ import createStore from "./helpers/createStore";
 
 const app = express();
 
+// if any request coming to this server, let say request came is localhost:3000/api/users then
+// that request will actually proxied to http://react-ssr-api.herokuapp.com , means
+// instead of hitting localhost:3000/api/users, it will hit to http://react-ssr-api.herokuapp.com/users
+// localhost:3000/api is replaced with http://react-ssr-api.herokuapp.com
+
 app.use(
   "/api",
   proxy("http://react-ssr-api.herokuapp.com", {
